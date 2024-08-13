@@ -1,0 +1,34 @@
+<div class="dashboard-container">
+  <div class="header">
+    <h1>Bem vindo ao livrologia</h1>
+    <button pButton type="button" label="Sair" icon="pi pi-sign-out" (click)="logout()" class="p-button p-button-danger logout-button"></button>
+  </div>
+  
+  <p>Aqui estão os livros avaliados:</p>
+
+  <p-table #table [value]="books" [paginator]="true" [rows]="5" [sortField]="'title'" [sortOrder]="1" [filterDelay]="500">
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="title">Título <p-sortIcon field="title"></p-sortIcon></th>
+        <th pSortableColumn="author">Autor <p-sortIcon field="author"></p-sortIcon></th>
+        <th>Descrição</th>
+      </tr>
+      <tr>
+        <th>
+          <input pInputText type="text" (input)="table.filter($any($event.target).value, 'title', 'contains')" placeholder="Filtrar por título">
+        </th>
+        <th>
+          <input pInputText type="text" (input)="table.filter($any($event.target).value, 'author', 'contains')" placeholder="Filtrar por autor">
+        </th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-book>
+      <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.description }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
