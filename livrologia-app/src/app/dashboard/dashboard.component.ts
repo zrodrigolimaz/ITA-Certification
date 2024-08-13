@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 interface Book {
   title: string;
@@ -20,5 +22,11 @@ export class DashboardComponent {
     { title: '1984', author: 'George Orwell', description: 'Um romance distópico que explora o totalitarismo, vigilância e controle governamental em um estado opressor.' },
     { title: 'A Revolução dos Bichos', author: 'George Orwell', description: 'Uma fábula alegórica que satiriza a corrupção política e o autoritarismo, narrada através da revolta de animais em uma fazenda.' }
   ];
-}
 
+  constructor(private authService: AuthService, private router: Router) {}
+
+  logout() {
+    this.authService.logout();  // Chama o serviço de logout
+  }
+
+} 
