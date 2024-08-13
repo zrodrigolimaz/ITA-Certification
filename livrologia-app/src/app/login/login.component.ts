@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Message } from 'primeng/api';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';  // Importe o AuthService
 
 @Component({
   selector: 'app-login',
@@ -12,15 +13,12 @@ export class LoginComponent {
   password: string = '';
   messages: Message[] = [];
 
-  constructor(private router: Router) { }  // Injeção do Router
+  constructor(private router: Router, private authService: AuthService) { }  // Injeção do AuthService
 
   login() {
-    if (this.username === 'user' && this.password === 'password') {
-      // Simulação de login bem-sucedido
+    if (this.authService.login(this.username, this.password)) {
+      // Se o login for bem-sucedido
       this.messages = [{ severity: 'success', summary: 'Login Successful', detail: 'You are now logged in.' }];
-
-      // Redirecionar para o dashboard
-      this.router.navigate(['/dashboard']);
     } else {
       // Mensagem de erro se as credenciais estiverem incorretas
       this.messages = [{ severity: 'error', summary: 'Login Failed', detail: 'Invalid username or password.' }];

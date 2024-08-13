@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 
 // PrimeNG Components
+import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
@@ -24,6 +25,7 @@ import { MessagesModule } from 'primeng/messages';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    TableModule,
     InputTextModule,
     ButtonModule,
     PasswordModule,
