@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { Message } from 'primeng/api';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +9,17 @@ import { AuthService } from '../auth.service';
 export class LoginComponent {
   username: string = '';
   password: string = '';
-  loginError: string = '';
+  messages: Message[] = []; // Adicionando a propriedade messages
 
-  constructor(private authService: AuthService) { }
+  constructor() { }
 
   login() {
-    const result = this.authService.login(this.username, this.password);
-
-    if (!result) {
-      this.loginError = 'Nome de usuário ou senha inválidos.';
+    if (this.username === 'user' && this.password === 'password') {
+      // Simulação de login bem-sucedido
+      this.messages = [{ severity: 'success', summary: 'Login Successful', detail: 'You are now logged in.' }];
+    } else {
+      // Mensagem de erro se as credenciais estiverem incorretas
+      this.messages = [{ severity: 'error', summary: 'Login Failed', detail: 'Invalid username or password.' }];
     }
   }
 }
