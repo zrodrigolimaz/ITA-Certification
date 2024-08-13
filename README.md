@@ -1,5 +1,7 @@
 # ITA-Certification
 Project Certification Repository of the Aeronautical Technology Institute (ITA)
+## Notion Especifications 
+[NOTION](https://zrodrigolimaz.notion.site/90b6ea9955294b0fb1f1dadecfd63a28?v=e1554ead3fdd4a16b0fcfeb5754f98d2&pvs=25).
 
 # LivrologiaApp
 
@@ -28,3 +30,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
