@@ -10,8 +10,8 @@ export class AuthService {
   constructor(private router: Router) { }
 
   login(username: string, password: string): boolean {
-    // Simulação de autenticação, onde o usuário e senha corretos são 'user' e 'password'
-    if (username === 'user' && password === 'password') {
+    // Simulação de autenticação, onde o usuário e senha corretos são 'admin' e 'admin'
+    if (username === 'admin' && password === 'admin') {
       this.isAuthenticated = true;
       this.router.navigate(['/dashboard']);
       return true;
