@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,10 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  username: string = '';
+  password: string = '';
+  loginError: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private authService: AuthService) { }
 
   login() {
-    this.router.navigate(['/dashboard']);
+    const result = this.authService.login(this.username, this.password);
+
+    if (!result) {
+      this.loginError = 'Nome de usuário ou senha inválidos.';
+    }
   }
 }
