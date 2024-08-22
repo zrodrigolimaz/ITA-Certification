@@ -23,8 +23,8 @@
         <th></th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-book>
-      <tr>
+    <ng-template pTemplate="body" let-book let-rowIndex="rowIndex">
+      <tr (click)="viewBookDetails(rowIndex)" style="cursor: pointer;">
         <td>{{ book.title }}</td>
         <td>{{ book.author }}</td>
         <td>{{ book.description }}</td>

@@ -48,6 +48,17 @@
   object-fit: contain; /* Garante que a imagem não seja esticada */
 }
 
+/* Estiliza as linhas da tabela para serem clicáveis */
+.dashboard-container tr {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dashboard-container tr:hover {
+  background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+}
+
+
 /* Estilos para tablets */
 @media screen and (max-width: 768px) {
   .login-page {
