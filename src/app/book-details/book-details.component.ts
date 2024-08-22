@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 interface Book {
   title: string;
@@ -26,7 +27,7 @@ export class BookDetailsComponent implements OnInit {
     { id: 6, title: 'A Revolução dos Bichos', author: 'George Orwell', description: 'Uma fábula alegórica que satiriza a corrupção política e o autoritarismo, narrada através da revolta de animais em uma fazenda.', pages: 112 }
   ];
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(private route: ActivatedRoute, private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')!;
@@ -35,5 +36,12 @@ export class BookDetailsComponent implements OnInit {
 
   goBack() {
     this.router.navigate(['/dashboard']);
+  }
+
+  markAsReading() {
+    if (this.book) {
+      this.authService.markAsReading(this.book.id);
+      alert(`O livro "${this.book.title}" foi marcado como "em leitura".`);
+    }
   }
 }

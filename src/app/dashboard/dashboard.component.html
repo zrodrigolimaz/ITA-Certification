@@ -12,6 +12,7 @@
         <th pSortableColumn="title">Título <p-sortIcon field="title"></p-sortIcon></th>
         <th pSortableColumn="author">Autor <p-sortIcon field="author"></p-sortIcon></th>
         <th>Descrição</th>
+        <th>Em Leitura</th> <!-- Nova coluna -->
       </tr>
       <tr>
         <th>
@@ -21,6 +22,7 @@
           <input pInputText type="text" (input)="table.filter($any($event.target).value, 'author', 'contains')" placeholder="Filtrar por autor">
         </th>
         <th></th>
+        <th></th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-book let-rowIndex="rowIndex">
@@ -28,6 +30,10 @@
         <td>{{ book.title }}</td>
         <td>{{ book.author }}</td>
         <td>{{ book.description }}</td>
+        <td>
+          <i *ngIf="book.isReading" class="pi pi-book" style="color: green;"></i>
+          <i *ngIf="!book.isReading" class="pi pi-book" style="color: red;"></i>
+        </td> <!-- Indicador de status de leitura -->
       </tr>
     </ng-template>
   </p-table>

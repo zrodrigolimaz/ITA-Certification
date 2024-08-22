@@ -7,6 +7,7 @@ interface Book {
   author: string;
   description: string;
   id: number;
+  isReading?: boolean; // Adicionado para indicar se o livro está "em leitura"
 }
 
 @Component({
@@ -25,6 +26,14 @@ export class DashboardComponent {
   ];
 
   constructor(private authService: AuthService, private router: Router) {}
+
+  ngOnInit() {
+    const readingList = this.authService.getReadingList();
+    this.books = this.books.map(book => ({
+      ...book,
+      isReading: readingList.includes(book.id)
+    }));
+  }
 
   viewBookDetails(index: number) {
     const bookId = this.books[index].id;
