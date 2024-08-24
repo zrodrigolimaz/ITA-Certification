@@ -27,6 +27,14 @@ export class DashboardComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
+   redirectToNotion(): void {
+    window.open('https://zrodrigolimaz.notion.site/90b6ea9955294b0fb1f1dadecfd63a28?v=e1554ead3fdd4a16b0fcfeb5754f98d2&pvs=4', '_blank');
+  }
+
+  redirectToGitHub(): void {
+    window.open('https://github.com/zrodrigolimaz/ITA-Certification/tree/develop', '_blank');
+  }
+
   ngOnInit() {
     const readingList = this.authService.getReadingList();
     this.books = this.books.map(book => ({
