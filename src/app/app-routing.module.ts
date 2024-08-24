@@ -3,12 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { RankingComponent } from './ranking/ranking.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'book-details/:id', component: BookDetailsComponent }
+  { path: 'book-details/:id', component: BookDetailsComponent },
+  { path: 'ranking', component: RankingComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

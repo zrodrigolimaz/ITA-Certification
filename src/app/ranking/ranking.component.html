@@ -1,0 +1,21 @@
+<div class="ranking-container">
+    <h1>Ranking de Usuários</h1>
+    
+    <p-table [value]="rankings" [paginator]="true" [rows]="5">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Posição</th>
+          <th>Usuário</th>
+          <th>Pontos</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-ranking let-rowIndex="rowIndex">
+        <tr [ngClass]="{'current-user': rowIndex + 1 === currentUserRanking}">
+          <td>{{ rowIndex + 1 }}</td>
+          <td>{{ ranking.username }}</td>
+          <td>{{ ranking.points }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  

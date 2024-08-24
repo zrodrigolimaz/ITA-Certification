@@ -15,13 +15,15 @@ import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
 import { MessagesModule } from 'primeng/messages';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { RankingComponent } from './ranking/ranking.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    RankingComponent
   ],
   imports: [
     BrowserModule,

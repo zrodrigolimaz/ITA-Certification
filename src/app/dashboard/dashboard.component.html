@@ -1,7 +1,10 @@
 <div class="dashboard-container">
   <div class="header">
     <h1>Bem vindo ao livrologia</h1>
-    <button pButton type="button" label="Sair" icon="pi pi-sign-out" (click)="logout()" class="p-button p-button-danger logout-button"></button>
+    <div class="header-buttons">
+      <button pButton type="button" label="Sair" icon="pi pi-sign-out" (click)="logout()" class="p-button p-button-danger logout-button"></button>
+      <button pButton type="button" label="Ranking" icon="pi pi-chart-bar" (click)="goToRanking()" class="p-button p-button-info ranking-button"></button>
+    </div>
   </div>
   
   <p>Aqui estão os livros avaliados:</p>
