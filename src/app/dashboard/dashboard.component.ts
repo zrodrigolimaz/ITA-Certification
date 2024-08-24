@@ -7,7 +7,7 @@ interface Book {
   author: string;
   description: string;
   id: number;
-  isReading?: boolean; // Adicionado para indicar se o livro está "em leitura"
+  isReading?: boolean;
 }
 
 @Component({
@@ -49,7 +49,7 @@ export class DashboardComponent {
   }
 
   goToRanking() {
-    this.router.navigate(['/ranking']); // Redireciona para a página de ranking
+    this.router.navigate(['/ranking']);
   }
 
 } 

@@ -2,9 +2,8 @@
   background-color: #E5E5E5;
   height: 100vh;
   display: flex;
-  justify-content: space-between; /* Alinha os itens nos lados opostos */
-  align-items: center;
-  padding: 0 50px; /* Adiciona algum espaçamento nas laterais */
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 .logo-container {
@@ -35,89 +34,45 @@
 }
 
 .image-container {
-  flex: 1; /* Ocupar o espaço restante */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Garante que a imagem ocupe a altura total */
+  height: 100%;
 }
 
 .image-container img {
   max-width: 100%;
   max-height: 110%;
-  object-fit: contain; /* Garante que a imagem não seja esticada */
+  object-fit: contain;
 }
 
-/* Estiliza as linhas da tabela para serem clicáveis */
 .dashboard-container tr {
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .dashboard-container tr:hover {
-  background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+  background-color: #e0e0e0;
 }
 
 
 /* Estilos para tablets */
 @media screen and (max-width: 768px) {
   .login-page {
-      flex-direction: column; /* Muda para uma coluna */
-      padding: 0 20px; /* Reduz o espaçamento lateral */
+      flex-direction: column;
+      padding: 0 20px;
       justify-content: center;
   }
 
   .login-container {
       margin-left: 0;
       margin-top: 20px;
-      max-width: 100%; /* Faz o login ocupar a largura máxima disponível */
+      max-width: 100%;
   }
 
   .image-container {
-      display: none; /* Esconde a imagem em tablets */
+      display: none;
   }
 }
 
-/* Estilos para dispositivos móveis */
-@media screen and (max-width: 480px) {
-  .login-page {
-      flex-direction: column; /* Muda para uma coluna */
-      padding: 0 10px; /* Reduz o espaçamento lateral */
-      justify-content: center;
-  }
-
-  .login-container {
-      margin-left: 0;
-      margin-top: 20px;
-      max-width: 100%; /* Faz o login ocupar a largura máxima disponível */
-      padding: 15px; /* Reduz o padding para melhor adaptação */
-  }
-
-  .logo-container {
-      margin-left: 0;
-      margin-bottom: 10px;
-  }
-
-  .logo {
-      max-width: 120px;
-  }
-
-  .image-container {
-      display: none; /* Esconde a imagem em dispositivos móveis */
-  }
-
-  .header-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .logout-button {
-    margin-right: 10px;
-  }
-  
-  .ranking-button {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-}

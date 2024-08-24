@@ -16,7 +16,7 @@
         <th pSortableColumn="title">Título <p-sortIcon field="title"></p-sortIcon></th>
         <th pSortableColumn="author">Autor <p-sortIcon field="author"></p-sortIcon></th>
         <th>Descrição</th>
-        <th>Em Leitura</th> <!-- Nova coluna -->
+        <th>Em Leitura</th>
       </tr>
       <tr>
         <th>
@@ -37,7 +37,7 @@
         <td>
           <i *ngIf="book.isReading" class="pi pi-book" style="color: green;"></i>
           <i *ngIf="!book.isReading" class="pi pi-book" style="color: red;"></i>
-        </td> <!-- Indicador de status de leitura -->
+        </td>
       </tr>
     </ng-template>
   </p-table>
