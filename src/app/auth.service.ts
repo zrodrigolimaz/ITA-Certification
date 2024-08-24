@@ -15,7 +15,7 @@ interface Trophy {
   providedIn: 'root'
 })
 export class AuthService {
-  private isAuthenticated = false;
+  private isAuthenticated: boolean;
   private readingList: number[] = [];
   
   private userPoints = 1300;
@@ -34,21 +34,26 @@ export class AuthService {
     { name: 'Master', description: 'Concedido ao completar 10 livros.' }
   ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    this.isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+  }
 
   login(username: string, password: string): boolean {
     if (username === 'admin' && password === 'admin') {
       this.isAuthenticated = true;
+      localStorage.setItem('isAuthenticated', 'true');
       this.router.navigate(['/dashboard']);
       return true;
     } else {
       this.isAuthenticated = false;
+      localStorage.setItem('isAuthenticated', 'false');
       return false;
     }
   }
 
   logout() {
     this.isAuthenticated = false;
+    localStorage.removeItem('isAuthenticated');
     this.router.navigate(['/login']);
     this.readingList = [];
   }
