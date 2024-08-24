@@ -3,6 +3,19 @@ Project Certification Repository of the Aeronautical Technology Institute (ITA)
 ## Notion Especifications 
 [NOTION](https://zrodrigolimaz.notion.site/90b6ea9955294b0fb1f1dadecfd63a28?v=e1554ead3fdd4a16b0fcfeb5754f98d2&pvs=25).
 
+## Descrição
+
+Livrologia é uma aplicação desenvolvida em Angular que permite aos usuários autenticados visualizar, gerenciar e acompanhar sua leitura de livros. A aplicação também inclui funcionalidades para visualização de rankings de usuários, pontos acumulados, e troféus conquistados.
+
+## Funcionalidades
+
+- **Login de Usuário:** Permite que usuários registrados façam login no sistema.
+- **Dashboard:** Exibe uma lista de livros avaliados, incluindo a possibilidade de marcar livros como "em leitura".
+- **Detalhes do Livro:** Permite que os usuários visualizem detalhes sobre um livro específico.
+- **Ranking de Usuários:** Exibe uma lista de usuários ordenados pela quantidade de pontos acumulados.
+- **Perfil do Usuário:** Exibe os pontos acumulados e troféus conquistados pelo usuário.
+- **Marcar Leitura:** Permite que o usuário marque um livro como "em leitura" e acompanhe seu progresso.
+
 # LivrologiaApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.

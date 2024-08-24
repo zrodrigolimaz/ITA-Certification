@@ -1,0 +1,11 @@
+.ranking-container {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .current-user {
+    font-weight: bold;
+    background-color: #dff0d8;
+  }
+  
+  

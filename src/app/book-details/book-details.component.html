@@ -1,0 +1,12 @@
+<div *ngIf="book" class="book-details-container">
+  <div class="header">
+      <button pButton type="button" label="Voltar" icon="pi pi-arrow-left" (click)="goBack()" class="p-button-secondary"></button>
+  </div>
+  <div class="book-info">
+      <h2 class="book-title">{{ book.title }}</h2>
+      <h3 class="book-author">Por {{ book.author }}</h3>
+      <p class="book-pages"><strong>Páginas:</strong> {{ book.pages }}</p>
+      <p class="book-description"><strong>Sinopse:</strong> {{ book.description }}</p>
+      <button pButton type="button" label="Marcar como em leitura" icon="pi pi-bookmark" class="p-button-success" (click)="markAsReading()"></button>
+  </div>
+</div>

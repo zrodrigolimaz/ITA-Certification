@@ -1,0 +1,18 @@
+<div class="profile-container">
+    <h1>Meu Perfil</h1>
+    
+    <div class="points-section">
+      <h2>Pontos Acumulados: {{ userPoints }}</h2>
+    </div>
+    
+    <div class="trophies-section">
+      <h2>Meus Troféus</h2>
+      <ul>
+        <li *ngFor="let trophy of trophies">
+          <h3>{{ trophy.name }}</h3>
+          <p>{{ trophy.description }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

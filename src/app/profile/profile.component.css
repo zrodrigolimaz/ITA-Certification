@@ -1,0 +1,35 @@
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .points-section {
+    margin-bottom: 20px;
+  }
+  
+  .trophies-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .trophies-section li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .trophies-section h3 {
+    margin: 0 0 5px;
+    font-size: 1.2em;
+  }
+  
+  .trophies-section p {
+    margin: 0;
+    color: #666;
+  }
+  

@@ -14,12 +14,18 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
 import { MessagesModule } from 'primeng/messages';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { RankingComponent } from './ranking/ranking.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    BookDetailsComponent,
+    RankingComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
