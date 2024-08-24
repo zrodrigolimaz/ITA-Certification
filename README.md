@@ -1,5 +1,7 @@
 # ITA-Certification
 Project Certification Repository of the Aeronautical Technology Institute (ITA)
+## Notion Especifications 
+[NOTION](https://zrodrigolimaz.notion.site/90b6ea9955294b0fb1f1dadecfd63a28?v=e1554ead3fdd4a16b0fcfeb5754f98d2&pvs=25).
 
 ## Descrição
 
@@ -80,5 +82,3 @@ Para gerar uma documentação mais detalhada, você pode utilizar o [Compodoc](h
     ```
     
     Acesse `http://localhost:8080/` para ver a documentação.
-
-    Para gerar uma documentação mais detalhada, você pode utilizar o [Compodoc](https://compodoc.app/), uma ferramenta para gerar documentação para projetos Angular.
