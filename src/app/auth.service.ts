@@ -16,9 +16,9 @@ interface Trophy {
 })
 export class AuthService {
   private isAuthenticated = false;
-  private readingList: number[] = []; // Lista de IDs de livros marcados como "em leitura"
+  private readingList: number[] = [];
   
-  private userPoints = 1300; // Pontos do usuário logado
+  private userPoints = 1300;
 
   private rankings: UserRanking[] = [
     { username: 'user1', points: 1200 },
@@ -50,7 +50,7 @@ export class AuthService {
   logout() {
     this.isAuthenticated = false;
     this.router.navigate(['/login']);
-    this.readingList = []; // Limpa a lista de leitura ao deslogar
+    this.readingList = [];
   }
 
   isLoggedIn(): boolean {
@@ -68,14 +68,13 @@ export class AuthService {
   }
 
   getRankings(): UserRanking[] {
-    // Ordenar o ranking pela quantidade de pontos, do maior para o menor
     return this.rankings.sort((a, b) => b.points - a.points);
   }
 
   getUserRanking(username: string): number {
     const sortedRankings = this.getRankings();
     const userIndex = sortedRankings.findIndex(user => user.username === username);
-    return userIndex + 1; // Retorna a posição no ranking (1-indexed)
+    return userIndex + 1;
   }
 
   getUserPoints(): number {
