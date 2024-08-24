@@ -44,6 +44,10 @@ export class DashboardComponent {
     this.authService.logout();
   }
 
+  goToProfile() {
+    this.router.navigate(['/profile']);
+  }
+
   goToRanking() {
     this.router.navigate(['/ranking']); // Redireciona para a página de ranking
   }
