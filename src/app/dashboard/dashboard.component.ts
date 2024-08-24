@@ -40,8 +40,9 @@ export class DashboardComponent {
     this.router.navigate(['/book-details', bookId]);
   }
 
-  logout() {
+  logout(): void {
     this.authService.logout();
+    this.router.navigate(['/login']);
   }
 
   goToProfile() {
