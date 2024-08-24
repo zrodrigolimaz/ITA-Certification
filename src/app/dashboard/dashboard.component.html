@@ -11,8 +11,6 @@
     </div>
   </div>
 
-  <p>Aqui estão os livros avaliados:</p>
-
   <p-table #table [value]="books" [paginator]="true" [rows]="5" [sortField]="'title'" [sortOrder]="1" [filterDelay]="500">
     <ng-template pTemplate="header">
       <tr>
