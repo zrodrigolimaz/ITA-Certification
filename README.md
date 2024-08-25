@@ -102,6 +102,5 @@ Para visualizar a documentação gerada:
 ```
 compodoc -s
 
-```
-
-Depois, navegue até `http://localhost:8080/` no seu navegador para ver a documentação.
+## Notion Especifications 
+[NOTION](https://zrodrigolimaz.notion.site/90b6ea9955294b0fb1f1dadecfd63a28?v=e1554ead3fdd4a16b0fcfeb5754f98d2&pvs=25).
