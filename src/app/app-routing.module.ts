@@ -6,6 +6,7 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
+import { MoviesComponent } from './movies/movies.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'book-details/:id', component: BookDetailsComponent,  canActivate: [AuthGuard] },
   { path: 'ranking', component: RankingComponent, canActivate: [AuthGuard] },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] }, 
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'movies', component: MoviesComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '' }
 ];
 

@@ -17,6 +17,7 @@ import { MessagesModule } from 'primeng/messages';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProfileComponent } from './profile/profile.component';
     DashboardComponent,
     BookDetailsComponent,
     RankingComponent,
-    ProfileComponent
+    ProfileComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
